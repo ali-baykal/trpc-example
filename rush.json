@@ -474,6 +474,12 @@
     //   "tags": ["tools"]
     // }
     {
+      "packageName": "szlk-web",
+      "projectFolder": "apps/szlk-web",
+      "reviewCategory": "application",
+      "tags": ["application", "translation", "service", "frontend"]
+    },
+    {
       "packageName": "szlk",
       "projectFolder": "apps/szlk",
       "reviewCategory": "application",
