@@ -8,10 +8,13 @@ importers:
   ../../packages/model:
     specifiers:
       tsconfig: workspace:*
+      typescript: ~4.8.2
       zod: ~3.18.0
     dependencies:
       tsconfig: link:../tsconfig
       zod: 3.18.0
+    devDependencies:
+      typescript: 4.8.2
 
   ../../packages/tsconfig:
     specifiers:
@@ -24,6 +27,12 @@ packages:
   /@types/node/18.7.14:
     resolution: {integrity: sha512-6bbDaETVi8oyIARulOE9qF1/Qdi/23z6emrUh0fNJRUmjznqrixD4MpGDdgOFk5Xb0m2H6Xu42JGdvAxaJR/wA==}
     dev: false
+
+  /typescript/4.8.2:
+    resolution: {integrity: sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
 
   /zod/3.18.0:
     resolution: {integrity: sha512-gwTm8RfUCe8l9rDwN5r2A17DkAa8Ez4Yl4yXqc5VqeGaXaJahzYYXbTwvhroZi0SNBqTwh/bKm2N0mpCzuw4bA==}
