@@ -474,6 +474,12 @@
     //   "tags": ["tools"]
     // }
     {
+      "packageName": "szlk",
+      "projectFolder": "apps/szlk",
+      "reviewCategory": "application",
+      "tags": ["application", "translation", "service"]
+    },
+    {
       "packageName": "model",
       "projectFolder": "packages/model",
       "reviewCategory": "library",
