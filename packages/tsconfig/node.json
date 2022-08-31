@@ -1,0 +1,15 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Compilation for node library",
+    "extends": "./base.json",
+    "compilerOptions": {
+        "lib": ["ES2017"],
+        "module": "commonjs",
+        "types": [
+            "node"
+        ],
+        "outDir": "dist"
+    }
+}
+
+  

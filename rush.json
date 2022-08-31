@@ -473,5 +473,11 @@
     //   "reviewCategory": "tools",
     //   "tags": ["tools"]
     // }
+    {
+      "packageName": "tsconfig",
+      "projectFolder": "packages/tsconfig",
+      "reviewCategory": "configuration",
+      "tags": ["configuration"]
+    }
   ]
 }
