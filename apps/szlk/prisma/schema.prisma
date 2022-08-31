@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model DBTranslation {
+  id Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  original String
+  translation String
+  initiatedById Int
+  initiatedBy DBAuthor @relation(fields: [initiatedById], references: [id], name: "initiation")
+  lastUpdatedById Int?
+  lastUpdatedBy DBAuthor? @relation(fields: [lastUpdatedById], references: [id], name: "update")
+  type String
+  from String
+  to String
+}
+
+model DBAuthor {
+  id Int @id @default(autoincrement())
+  name String
+  initialtedTranslations DBTranslation[] @relation(name: "initiation")
+  updatedTranslations DBTranslation[] @relation(name: "update")
+}
