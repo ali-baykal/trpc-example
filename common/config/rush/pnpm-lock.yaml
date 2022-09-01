@@ -8,7 +8,7 @@ importers:
   ../../apps/szlk:
     specifiers:
       '@prisma/client': ~4.3.0
-      '@trpc/server': ~9.27.2
+      '@trpc/server': 10.0.0-proxy-alpha.59
       '@types/express': ~4.17.13
       '@types/node': ~18.7.14
       express: ~4.18.1
@@ -19,7 +19,7 @@ importers:
       typescript: ~4.7.4
       zod: ~3.18.0
     dependencies:
-      '@trpc/server': 9.27.2
+      '@trpc/server': 10.0.0-proxy-alpha.59
       express: 4.18.1
       model: link:../../packages/model
       zod: 3.18.0
@@ -1848,8 +1848,8 @@ packages:
       react-query: 3.39.2_biqbaboplfbrettd7655fr4n2y
     dev: false
 
-  /@trpc/server/9.27.2:
-    resolution: {integrity: sha512-LcXCC004SYWVdHqjSZVpoKkcM0tJNwWtvmjmE2Jir36F0siY1CCbr7g2vz6LcOtA/q7Jj5G2/x1qMWzlPq/Bwg==}
+  /@trpc/server/10.0.0-proxy-alpha.59:
+    resolution: {integrity: sha512-rp7FIcT9KaZpqjymFXpakZRq/jshOKsLcaOM/UgaXgcec8/rMcu2V19/Stf2yYSxC5qQKihaLozAAitw6Ftt9g==}
     dev: false
 
   /@tsconfig/node10/1.0.9:
