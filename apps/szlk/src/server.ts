@@ -1,6 +1,6 @@
 import { initTRPC } from '@trpc/server';
 import * as trpcExpress from '@trpc/server/adapters/express';
-import { TranslationParser, PersistedTranslationParser } from 'model/dist/Translation';
+import { PersistedTranslationParser } from 'model/dist/Translation';
 import { z } from 'zod';
 import {getAuthorById, getTranslationById, readAllTranslations, saveTranslation} from './db-io/client'
 import express from 'express';
@@ -21,7 +21,7 @@ const appRouter = trpc.router({
   saveTranslation: trpc.procedure
       .input(input => z.object({
           authorId: z.number().int(),
-          translation: TranslationParser.or(PersistedTranslationParser)
+          translation: PersistedTranslationParser
       }).parse(input))
       .mutation(async (req) => {
         const {authorId, translation} = req.input;
@@ -81,7 +81,6 @@ const createContext = ({
     req,
     res,
   }: trpcExpress.CreateExpressContextOptions) => ({}) // no context
-type Context = trpc.inferAsyncReturnType<typeof createContext>;
 
 app.use(
     '/trpc',
@@ -91,4 +90,4 @@ app.use(
     })
 );
 
-app.listen(4000);
+app.listen(4004);

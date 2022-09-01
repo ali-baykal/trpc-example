@@ -1,5 +1,18 @@
+import { useLoaderData } from '@remix-run/react';
+import { trpc } from '../trpcClient.server'
+import type { PersistedTranslation } from 'model/dist/Translation';
+import TranslationTable from '~/components/TranslationTable';
+
+
+export const loader = async () => {
+  return await trpc.readAllTranslations.query();
+}
+
+
 export default function Index() {
+  const translations = useLoaderData() as PersistedTranslation[];
+
   return (
-    <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <TranslationTable translations={translations}></TranslationTable>
   );
 }

@@ -48,10 +48,13 @@ importers:
       autoprefixer: ~10.4.8
       concurrently: ~7.3.0
       eslint: ^8.20.0
+      model: workspace:*
       postcss: ~8.4.16
+      ramda: ~0.28.0
       react: ^18.2.0
       react-dom: ^18.2.0
       react-query: ~3.39.2
+      szlk: workspace:*
       tailwindcss: ~3.1.8
       trpc-remix: ~10.0.0-alpha.40.1
       typescript: ^4.7.4
@@ -63,6 +66,7 @@ importers:
       '@trpc/client': 10.0.0-proxy-alpha.59_dkwjcmc3ydgkzffzun34zj62xm
       '@trpc/react': 10.0.0-proxy-alpha.59_xuhg4boeav4n7ceo2iz7mo2ley
       '@trpc/server': 10.0.0-proxy-alpha.59
+      ramda: 0.28.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-query: 3.39.2_biqbaboplfbrettd7655fr4n2y
@@ -75,7 +79,9 @@ importers:
       autoprefixer: 10.4.8_postcss@8.4.16
       concurrently: 7.3.0
       eslint: 8.23.0
+      model: link:../../packages/model
       postcss: 8.4.16
+      szlk: link:../szlk
       tailwindcss: 3.1.8_postcss@8.4.16
       typescript: 4.8.2
 
@@ -7161,6 +7167,10 @@ packages:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
     dev: true
+
+  /ramda/0.28.0:
+    resolution: {integrity: sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==}
+    dev: false
 
   /range-parser/1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}

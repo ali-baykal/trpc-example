@@ -11,13 +11,11 @@ export const Adjective = 'aj';
 export const Pre = 'pre';
 export const Directive = 'd';
 
-const TypeEnum = z.enum([Adjective, Verb, Noun, e, r, Plural, Pre, Directive]);
+export const TranslationType = z.enum([Adjective, Verb, Noun, e, r, Plural, Pre, Directive]);
 
 export const TranslationParser = z.object({
-    origin: z.object({
-        main: z.string()
-    }),
-    type: TypeEnum,
+    original: z.string(),
+    type: TranslationType,
     translation: z.string(),
     from: Language,
     to: Language,
